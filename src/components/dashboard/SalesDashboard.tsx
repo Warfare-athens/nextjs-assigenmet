@@ -1,4 +1,6 @@
 "use client"
+"use client";
+
 import React, { useState, useMemo } from 'react';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
@@ -105,14 +107,14 @@ export const SalesDashboard: React.FC = () => {
             </div>
             
             <div>
-              <Input
-                type="number"
-                label="Sales Threshold ($)"
-                value={salesThreshold}
-                onChange={setSalesThreshold}
-                min={0}
-                placeholder="Enter threshold"
-              />
+                          <Input
+              type="number"
+              label="Sales Threshold ($)"
+              value={salesThreshold}
+              onChange={(value) => setSalesThreshold(Number(value))}
+              min={0}
+              placeholder="Enter threshold"
+            />
             </div>
 
             <div className="md:col-span-2">
